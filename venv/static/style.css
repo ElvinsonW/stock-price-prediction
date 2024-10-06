@@ -1,0 +1,361 @@
+@font-face {
+    font-family: 'Timeless-Bold';
+    src: url('assets/Timeless-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Timeless';
+    src: url('assets/Timeless.ttf') format('truetype');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    /* background-image: url(assets/abstract_background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed; */
+    scroll-behavior: smooth;
+}
+
+.background-overlay {
+    width: 100%;
+    height: fit-content;
+    background-image: 
+        linear-gradient(to bottom, rgba(244, 177, 216, 0.461), rgba(37, 6, 55, 0.913)),
+        url('assets/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+.home{
+    height: 100vh;
+    /* background-color: aqua; */
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding: 0 2vw;
+}
+
+.left{
+    height: auto;
+    width: 40vw;
+    margin: 0 5vw;
+    /* background-color: blanchedalmond; */
+    padding: 1vw 2vw;
+}
+
+.text{
+    text-align: justify;
+    color: rgb(242, 230, 255);
+}
+
+.text h1{
+    font-family: 'Timeless-Bold', sans-serif;
+    font-size: 4vw;
+    margin-bottom: 0.5vw;
+}
+
+.text h4{
+    font-family: 'Timeless-Bold', sans-serif;
+    font-size: 1.8vw;
+    margin-bottom: 1vw;
+}
+
+
+.text h5{
+    font-family: 'Timeless', sans-serif;
+    font-size: 1.3vw;
+}
+
+.start #start-button{
+    margin: 2vw 0;
+    width: auto;
+    height: auto;
+    padding: 1vw;
+    font-family: 'Timeless-Bold', sans-serif;
+    /* background-color: yellowgreen; */
+    border: 0.5%;
+    border-color: rgb(242, 230, 255);
+    border-radius: 1vw;
+    cursor: pointer;
+    font-size: 1.2vw;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    color: rgb(38, 35, 84);
+}
+
+#start-button:hover{
+    background-color: rgb(38, 35, 84);
+    transform: scale(1.05);
+    color: rgb(242, 230, 255);
+    border-color: rgb(242, 230, 255);
+}
+
+.logo img{
+    width: 40vw;
+    height: auto;
+}
+
+.main{
+    height: fit-content;
+    padding: 0 0 10vw 0;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    /* background-color: white; */
+    /* flex-direction: column; */
+    /* padding: 5vh 2vw; */
+    color: rgb(242, 230, 255);
+}
+
+
+
+.data{
+    height: fit-content;
+    /* background-color: wheat; */
+    /* margin: 50% 0; */
+    background-color: transparent;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.head{
+    /* height: auto; */
+    text-align: center;
+    font-family: 'Timeless-Bold', sans-serif;
+    /* margin-bottom: 1vh; */
+}
+
+.head h1{
+    font-size: 3vw;
+}
+
+.head h5{
+    font-size: 1.3vw;
+}
+
+.input{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    padding: 4vh 0;
+    text-align: center;
+}
+
+.input-section{
+    display: flex;
+    flex-direction: row;
+    gap: 1vw;
+}
+
+label {
+    display: inline-block;
+    width: 5vw;
+    font-size: 1vw;
+    font-family: 'Timeless', sans-serif;
+    font-weight: bolder;
+}
+
+input{
+    margin: 1vh 0vw;
+    height: 4vh;
+    width: 32vw;
+    padding: 0.5vh 2vh;
+    border-radius: 0.7vw;
+    font-family: 'Timeless', sans-serif;
+    border-color: rgb(242, 230, 255);
+    color: rgb(38, 35, 84);
+    background-color: rgb(255, 240, 248);;
+}
+
+
+#predict{
+    height: auto;
+    width: auto;
+    padding: 1vh 3vw;
+    font-size: 1.5vw;
+    font-weight: bold;
+    margin-top: 2vw;
+    background-color: rgb(242, 230, 255);
+    border-radius: 0.5vw;
+    border-color: rgb(38, 35, 84);
+    color: rgb(38, 35, 84);
+    font-family: 'Timeless-Bold', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+#predict a{
+    text-decoration: none;
+    color: rgb(38, 35, 84);
+}
+
+#predict:hover{
+    background-color: rgb(38, 35, 84);
+    transform: scale(1.05);
+    color: rgb(242, 230, 255);
+    border-color: rgb(242, 230, 255);
+}
+
+#predict:hover a{
+    color: rgb(242, 230, 255);
+}
+
+.result{
+    margin: 1vw;
+    width: 30%;
+    font-size: 1vw;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.result h2{
+    font-family: 'Timeless-Bold', sans-serif;
+    text-align: center;
+    margin-bottom: 1.5vw;
+}
+
+#predicted-result{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2vw;
+    height: 10vw;
+    width: 80%;
+    border-radius: 1vw;
+    color: rgb(38, 35, 84);
+    background-color: rgb(242, 230, 255);
+    font-weight: bold;
+}
+
+#predicted-title{
+    justify-self: center;
+    display: none;
+}
+
+#none{
+    font-size: 5vw;
+}
+
+#predicted-value{
+    font-size: 4.5vw;
+}
+
+@media only screen and (max-width: 1024px) {   
+    .home{
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+    .input-section{
+        flex-direction: column;
+    }
+    .logo, .logo img{
+        width: 50vw;
+        height: auto;
+    }
+
+    .left{
+        width: 70vw;
+        gap: 2vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .text{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .text h1{
+        font-family: 'Timeless-Bold', sans-serif;
+        font-size: 7vw;
+        margin-bottom: 1vw;
+    }
+    
+    .text h4{
+        font-family: 'Timeless-Bold', sans-serif;
+        font-size: 3vw;
+        margin-bottom: 2vw;
+    }
+    
+    
+    .text h5{
+        font-family: 'Timeless', sans-serif;
+        font-size: 2vw;
+        width: 50vw;
+        line-height: 1.5;
+    }
+
+    .start{
+        display: flex;
+        justify-content: center;
+        width: fit-content;
+        height: fit-content;
+    }
+
+    .start #start-button{
+        font-size: 2.5vw;
+        padding: 2vw;
+    }
+
+    .head h1{
+        font-size: 6vw;
+    }
+
+    .head h5{
+        font-size: 3vw;
+    }
+
+    .input, .input-section, .section1, .section2{
+        width: 80vw;
+    }
+
+    label{
+        font-size: 2vw;
+        width: 10vw;
+    }
+    input{
+        width: 50vw;
+    }
+
+    input::placeholder{
+        font-size: 1.5vw;
+    }
+    #predict{
+        font-size: 2.5vw;
+        padding: 2vw;
+    }
+    .result{
+        width: 50vw;
+        height: 15vw;
+    }
+
+    #predicted-result{
+        height: 25vw;
+    }
+
+    #none{
+        font-size: 6vw;
+    }
+
+    #predicted-result h2{
+        font-size: 3vw;
+    }
+
+    #predicted-value{
+        font-size: 6vw;
+    }
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TradeTrends</title>
+    <link rel="icon" href="./static/assets/TradeTrends Logo.png">
+    <link rel="stylesheet" href="./static/style.css">
+</head>
+<body>
+    <div class="background-overlay">
+
+        <div class="home" id="home-page">
+            <div class="left">
+                <div class="text">
+                    <h1>TradeTrends</h1>
+                    <h4>Get To Know <b>NETFLIX'S</b> Future Stock Trends</h4>
+                    <h5>Unlock the potential of your investments with cutting-edge stock market predictions powered by advanced algorithms and real-time data. Whether you're a seasoned investor or just starting, our platform provides accurate forecasts, actionable insights, and personalized recommendations to help you stay ahead in the market. Trust in the power of data-driven analysis to guide your financial journey. Start predicting, start profiting.</h5>
+                </div>
+                <div class="start">
+                    <a href="#main-page">
+                        <input type="button" value="Unlock Predictions" name="start" id="start-button">
+                    </a>
+                </div>
+            </div>
+            <div class="logo">            
+                <img src="./static/assets/TradeTrends Logo.png" alt="TradeTrends Logo">
+            </div>
+        </div>
+
+        <div class="main" id="main-page">
+            <div class="data">
+                <div class="head">
+                    <h1>TradeTrends</h1>
+                    <h5>Unlock Market Trends, Maximize Your Trades</h5>
+                </div>
+                <form action="{{url_for('predict')}}", method="post", class="input" id="form-input">
+                    <div class="input-section">
+                        <div class="section1">    
+                            <label for="price-day1">Day 1</label>
+                            <input type="number" id="price-day1" name="price-day1" step="0.000001" value="{{price_day1}}" placeholder="Enter Day 1 Stock Closing Price" required><br>
+                            
+                            <label for="price-day2">Day 2</label>
+                            <input type="number" id="price-day2" name="price-day2" step="0.000001" value="{{price_day2}}" placeholder="Enter Day 2 Stock Closing Price" required><br>
+                            
+                            <label for="price-day3">Day 3</label>
+                            <input type="number" id="price-day3" name="price-day3" step="0.000001" value="{{price_day3}}" placeholder="Enter Day 3 Stock Closing Price" required><br>
+                            
+                            <label for="price-day4">Day 4</label>
+                            <input type="number" id="price-day4" name="price-day4" step="0.000001" value="{{price_day4}}" placeholder="Enter Day 4 Stock Closing Price" required><br>
+                            
+                            <label for="price-day5">Day 5</label>
+                            <input type="number" id="price-day5" name="price-day5" step="0.000001" value="{{price_day5}}" placeholder="Enter Day 5 Stock Closing Price" required><br>
+                            
+                            
+                        </div>
+
+                        <div class="section2">
+
+                            
+                            <label for="price-day6">Day 6</label>
+                            <input type="number" id="price-day6" name="price-day6" step="0.000001" value="{{price_day6}}" placeholder="Enter Day 6 Stock Closing Price" required><br>
+                            
+                            <label for="price-day7">Day 7</label>
+                            <input type="number" id="price-day7" name="price-day7" step="0.000001" value="{{price_day7}}" placeholder="Enter Day 7 Stock Closing Price" required><br>
+                            
+                            <label for="price-day8">Day 8</label>
+                            <input type="number" id="price-day8" name="price-day8" step="0.000001" value="{{price_day8}}" placeholder="Enter Day 8 Stock Closing Price" required><br>
+                            
+                            <label for="price-day9">Day 9</label>
+                            <input type="number" id="price-day9" name="price-day9" step="0.000001" value="{{price_day9}}" placeholder="Enter Day 9 Stock Closing Price" required><br>
+                            
+                            <label for="price-day10">Day 10</label>
+                            <input type="number" id="price-day10" name="price-day10" step="0.000001" value="{{price_day10}}" placeholder="Enter Day 10 Stock Closing Price" required><br>
+                            
+                        </div>
+                    </div>
+                    
+                    
+                    <button type="submit" id="predict">
+                        PREDICT
+                    </button>
+                
+                </form>
+                
+            </div>
+        
+            <div class="result" id="result-page">
+                <div id="predicted-result">
+                    <h1 id="none">N/A</h1>
+                    <h2 id="predicted-title">Next Day Closing Price</h1>
+                    <p id="predicted-value">{{prediction_text}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./static/script.js"></script>
+</body>
+</html>
